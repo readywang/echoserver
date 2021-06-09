@@ -63,8 +63,11 @@ void do_client(int fd)
                     }
                     else if(ret==0)
                     {
-                        printf("server closed\n");
-                        return ;
+                        if(errno!=EAGAIN)
+                        {
+                        	printf("server closed\n");
+			            }
+			            return;
                     }
                     else
                     {

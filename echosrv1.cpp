@@ -184,7 +184,6 @@ int main(int argc,char *argv[])
     int port=0;
     while((ret=getopt(argc,argv,"p:"))!=-1)
     {
-        
         if(ret=='p')
         {
             port=atoi(optarg);
